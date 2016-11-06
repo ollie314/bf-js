@@ -18,3 +18,10 @@ describe('Transform string to bit array', () => {
       });
    });
 });
+
+describe('Check absolute computation', () => {
+   it('should compute the same', () => {
+      assert.equal(Math.abs(-2), utils.abs(-2));
+      assert.equal(Math.abs(-5), utils.abs(-5));
+   });
+});
