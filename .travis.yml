@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "6"
+  - "6.1"
+  - "6.9.0"
+  - "6.9.1"
+env:
+  - RUN_MODE=test
+before_install:
+  - "export F_NAME='test'"
+  - touch .env
+install:
+  - npm install -g mocha eslint istanbul
+  - npm install
+before_script:
+  - "export APP_HOME=`pwd`"
+script:
+  - npm test
